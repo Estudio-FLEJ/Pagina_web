@@ -1,0 +1,230 @@
+/* La parte del framework es de 3-163 (https://uiverse.io/glisovic01/stale-chipmunk-33)*/ 
+
+.login-box {
+  position: absolute; /* Coloca el elemento de forma absoluta con respecto a su contenedor más cercano */
+  top: 32rem; /* Establece un margen superior */
+  left: 50%; /* Define el margen de la izquierda*/
+  width: 400px; /* Define el ancho*/
+  padding: 40px; /* Espacio interno de 40px en todos los lados */
+  margin: 20px auto; /* Márgenes automáticos a los lados y un margen de 20px en la parte superior e inferior */
+  transform: translate(-50%, -55%); 
+  background: rgba(0,0,0,.9); /* Establece un color de fondo*/
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6); 
+  border-radius: 10px; /* Sirve para ponerle borde redondeado*/
+}
+
+.login-box p:first-child {
+  margin: 0 0 30px; /* Márgenes de 0px arriba, 0px a la derecha e izquierda, y 30px abajo */
+  padding: 0; /* Quita el padding */
+  color: #fff; /* Color de la letra blanco */
+  text-align: center; /* Centra el texto dentro del párrafo */
+  font-size: 1.5rem; /* El tamaño de la letra*/
+  font-weight: bold; /* Pone la letra en negrita */
+  letter-spacing: 1px; /* Pone espacio entre las letras */
+}
+
+.login-box .user-box {
+  position: relative; 
+}
+
+.login-box .user-box input {
+  width: 100%; /* Define el ancho*/
+  padding: 10px 0; /* Define el espacio interno de arriba y abajo */
+  font-size: 16px; /* Tamaño de la letra */
+  color: #fff; /* Color de la letra blanco */
+  margin-bottom: 30px; /* Sirve para ponerle margen de abajo*/
+  border: none; /* Sirve para quitar el borde */
+  border-bottom: 1px solid #fff; /* Sirve para ponerle borde inferior */
+  outline: none; /* Elimina el contorno */
+  background: transparent; 
+}
+
+.login-box .user-box label {
+  position: absolute; /* Posiciona la etiqueta de forma absoluta */
+  top: 0; /* La etiqueta se alinea en la parte superior */
+  left: 0; /* Sirve para que se ponga el contenedor a la iquierda */
+  padding: 10px 0; /* Sirve para ponerle margen arriba y abajo*/
+  font-size: 16px; /* Tamaño de la letra*/
+  color: #fff; /* Color de la letra */
+  pointer-events: none; 
+  transition: .5s; 
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px; /* Mueve la etiqueta hacia arriba */
+  left: 0; /* Mantiene la etiqueta alineada a la izquierda */
+  color: #fff; /* Color blanco */
+  font-size: 12px; /* Tamaño de la letra*/
+}
+
+.login-box form a {
+  position: relative; /* Posiciona el enlace de forma relativa */
+  display: inline-block; /* Hace que el enlace se comporte como un bloque en línea */
+  padding: 10px 20px; /* 10px de espacio interno arriba y abajo, 20px a los lados */
+  font-weight: bold; /* Pone el texto en negrita*/
+  color: #fff; /* Color blanco */
+  font-size: 16px; /* Tamaño de la letra */
+  text-decoration: none; /* Elimina el subrayado del texto */
+  text-transform: uppercase; /* Pone el texto en mayúscula */
+  overflow: hidden; /* Oculta el contenido que sobrepase los límites del enlace */
+  transition: .5s; 
+  margin-top: 40px; /* Pone margen superior */
+  letter-spacing: 3px; /* Pone espacio entre las letras */
+}
+
+.login-box a:hover {
+  background: #fff; /* Fondo blanco cuando te pones encima */
+  color: #272727; /* Color del texto a gris oscuro */
+  border-radius: 5px; /* Pone los bordes redondeados */
+}
+
+.login-box a span {
+  position: absolute; 
+}
+
+.login-box a span:nth-child(1) {
+  top: 0; /* Lo coloca en la parte superior */
+  left: -100%; /* Lo coloca fuera de la pantalla por la izquierda */
+  width: 100%; /* Sirve para poner anchura */
+  height: 2px; /* Sirve para ponerle altura*/
+  background: linear-gradient(90deg, transparent, #fff); /* Fondo con un degradado de transparente a blanco */
+  animation: btn-anim1 1.5s linear infinite; 
+
+}
+
+
+@keyframes btn-anim1 {
+  0% {
+      left: -100%; /* Comienza fuera de la pantalla a la izquierda */
+  }
+  50%, 100% {
+      left: 100%; /* Se mueve hacia el lado derecho completamente */
+  }
+}
+
+/* Estilos para el segundo span del enlace (animación en el borde derecho) */
+.login-box a span:nth-child(2) {
+  top: -100%; /* Lo coloca fuera de la pantalla por arriba */
+  right: 0; /* Lo alinea a la derecha */
+  width: 2px; /* Define el ancho*/
+  height: 100%; /* Define la altura */
+  background: linear-gradient(180deg, transparent, #fff); /* Degradado de transparente a blanco */
+  animation: btn-anim2 1.5s linear infinite; 
+  animation-delay: .375s; 
+}
+
+@keyframes btn-anim2 {
+  0% {
+      top: -100%; /* Comienza fuera de la pantalla arriba */
+  }
+  50%, 100% {
+      top: 100%; /* Se mueve completamente hacia abajo */
+  }
+}
+
+/* Estilos para el tercer span del enlace (animación en el borde inferior) */
+.login-box a span:nth-child(3) {
+  bottom: 0; /* Lo coloca en la parte inferior */
+  right: -100%; /* Lo coloca fuera de la pantalla por la derecha */
+  width: 100%; /* Define el ancho */
+  height: 2px; /* Define la altura */
+  background: linear-gradient(270deg, transparent, #fff); /* Degradado de transparente a blanco */
+  animation: btn-anim3 1.5s linear infinite;
+  animation-delay: .75s; 
+}
+
+@keyframes btn-anim3 {
+  0% {
+      right: -100%; /* Comienza fuera de la pantalla a la derecha */
+  }
+  50%, 100% {
+      right: 100%; /* Se mueve completamente hacia la izquierda */
+  }
+}
+
+/* Estilos para el cuarto span del enlace */
+.login-box a span:nth-child(4) {
+  bottom: -100%; /* Lo coloca fuera de la pantalla por abajo */
+  left: -4rem; /* Lo alinea a la izquierda***********************************/
+  width: 2px; /* Define el ancho*/
+  height: 100%; /* Altura completa */
+  background: linear-gradient(360deg, transparent, #fff); /* Degradado de transparente a blanco */
+  animation: btn-anim4 1.5s linear infinite; 
+  animation-delay: 1.125s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+      bottom: -100%; /* Comienza fuera de la pantalla abajo */
+  }
+  50%,100% {
+      bottom: 100%; /* Se mueve completamente hacia arriba */
+  }
+}
+
+
+/*Para que la linea baje*/
+#abajo {
+  margin-top: 38rem; /* Márgenes superiores de 38rem */
+}
+
+
+/*--------------------------------- Media Queries para hacer la pagina responsive--------------------------------------*/
+
+/* Para pantallas pequeñas (móviles grandes y tablets pequeñas) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .login-box {
+    width: 300px;
+    padding: 25px; 
+    top: 28rem; 
+  }
+
+  .login-box p:first-child {
+    font-size: 1.3rem; 
+  }
+
+  .login-box form a {
+    font-size: 14px; 
+    padding: 8px 16px; 
+  }
+
+  #abajo {
+    margin-top: 34rem;
+  }
+}
+
+/* Para pantallas muy pequeñas (móviles) */
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .login-box {
+    width: 85%; 
+    max-width: 280px;
+    padding: 20px;
+    top: 25rem; 
+  }
+
+  .login-box p:first-child {
+    font-size: 1.2rem; 
+    margin-bottom: 20px; 
+  }
+
+  .login-box .user-box input {
+    font-size: 14px; 
+    margin-bottom: 20px; 
+  }
+
+  .login-box .user-box label {
+    font-size: 14px; 
+  }
+
+  .login-box form a {
+    font-size: 12px; 
+    padding: 8px 12px; 
+    letter-spacing: 2px; 
+  }
+
+  #abajo {
+    margin-top: 30rem; 
+  }
+}

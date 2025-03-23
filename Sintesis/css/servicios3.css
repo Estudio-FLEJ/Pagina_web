@@ -1,0 +1,143 @@
+/*Parte Framework de la linea 69-126 es el boton de ver proyectos*/
+
+
+/* Estilos generales del cuerpo de la página */
+body {
+    line-height: 1.6; /* Establece la altura entre línea */
+    font-family: serif; /* Establece la fuente como serif */
+
+}
+
+/* Estilos para el título de la sección de servicios */
+.titulos-servicios {
+    width: 30rem; /* Establece el ancho del título a un 50% del contenedor */
+    font-size: 50px; /* Establece el tamaño de la fuente a 3rem */
+    font-weight: normal; /* Establece el peso de la fuente como normal (no negrita) */
+    font-family: serif; /* Establece el tipo de fuente a serif */
+    margin-left: 2rem;
+}
+
+/* Estilos para la sección de contenido */
+.content-section {
+    display: flex; /* Activa el modelo Flexbox para alinear los elementos */
+    margin-bottom: 30px; /* Añade un margen inferior de 30px */
+ }
+
+/* Estilos para la sección de contenido */
+.content-section1 {
+    display: flex; /* Activa el modelo Flexbox para alinear los elementos */
+    margin-bottom: 30px; /* Añade un margen inferior de 30px */
+    height: 5rem;
+    margin-left: 2rem;
+ }
+
+/* Estilos para el bloque de texto dentro de la sección */
+.text {
+    flex: 1; /* Hace que el texto ocupe el espacio disponible */
+    width: 36rem; /* Establece un ancho fijo de 100rem para el bloque de texto */
+    height: 10rem; /* Establece una altura fija de 10rem para el bloque de texto */
+    margin-left: 2rem; /* Establece un margen de 1rem a la izquierda */
+}
+/* Estilos para el bloque de texto dentro de la sección */
+.text1 {
+    flex: 1; /* Hace que el texto ocupe el espacio disponible */
+    width: 36rem; /* Establece un ancho fijo de 100rem para el bloque de texto */
+    height: 10rem; /* Establece una altura fija de 10rem para el bloque de texto */
+    margin-left: 9rem; /* Establece un margen de 1rem a la izquierda */
+}
+
+/* Estilos para las imágenes dentro de la sección */
+.imagen img {
+    flex: 1; /* Hace que la imagen ocupe el espacio disponible */
+    width: 600px; /* Establece un ancho fijo de 600px para la imagen */
+    height: 500px; /* Establece una altura fija de 500px para la imagen */
+    display: flex; /* Hace que la imagen se alinee dentro del contenedor */
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    font-size: 18px; /* Establece el tamaño de la fuente a 18px */
+    margin-top: -3rem; /* Añade un margen negativo para mover la imagen hacia arriba */
+    color: #7f8c8d; /* Establece el color del texto ( */
+}
+
+/* Estilos para otra imagen con fondo diferente */
+.imagen1 img {
+    flex: 1; /* Hace que la imagen ocupe el espacio disponible */
+    width: 500px; /* Establece un ancho fijo de 500px para la imagen */
+    height: 500px; /* Establece una altura fija de 500px para la imagen */
+    display: flex; /* Hace que la imagen se alinee dentro del contenedor */
+    background-color: #001a20; /* Establece un fondo oscuro (#001a20) */
+    margin-top: -18rem; /* Añade un margen negativo para mover la imagen hacia arriba */
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center; /* Centra la imagen horizontalmente */
+}
+
+
+/*--------------------------------- Media Queries para hacer la pagina responsive--------------------------------------*/
+
+@media (max-width: 1200px) {
+    .titulos-servicios {
+      width: 100%;
+      font-size: 40px;
+      margin-left: 1rem;
+    }
+  
+    .text,
+    .text1 {
+      width: 100%;
+      height: auto;
+      margin-left: 1rem;
+    }
+  
+    .text1 {
+      margin-left: 1rem;
+    }
+  
+    .imagen img,
+    .imagen1 img {
+      width: 100%;
+      height: auto;
+      max-width: 500px;
+      margin-top: 1rem;
+    }
+  
+    .imagen1 img {
+      margin-top: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .content-section,
+    .content-section1 {
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+  
+    .content-section1 {
+      height: auto;
+    }
+  
+    .titulos-servicios {
+      font-size: 36px;
+    }
+  
+    .imagen img,
+    .imagen1 img {
+      order: -1;
+      margin-bottom: 1rem;
+    }
+  
+    .imagen1 img {
+      margin-top: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .titulos-servicios {
+      font-size: 30px;
+    }
+  
+    .text,
+    .text1 {
+      font-size: 16px;
+    }
+  }

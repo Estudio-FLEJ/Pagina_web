@@ -1,0 +1,105 @@
+.galeria {
+    display: flex; 
+    /*Organiza los elementos dentro de galeria en una fila*/
+    flex-wrap: wrap;   
+    /* Permite que los elementos se envuelvan a la siguiente línea cuando no haya suficiente espacio */
+}
+
+.imagen-container {
+    position: relative;
+    /* Establece la posición relativa para poder posicionar elementos dentro de él (como el texto) */
+    width: calc(50%); 
+    /* Establece que cada imagen ocupará el 50% del ancho del contenedor (por lo tanto, dos imágenes por fila) */
+    margin-bottom: -6px; 
+    /* Ajusta el margen inferior para eliminar un pequeño espacio entre las filas de imágenes */
+}
+
+.imagen-container img {
+    width: 40.1rem; 
+    /* Define el ancho de la imagen, asegurándose de que no exceda el contenedor y se ajuste bien */
+    height: 20rem; 
+    /* Establece la altura de la imagen de manera fija para mantener la proporción */
+    margin-left: -1rem;
+    /* Aplica un margen negativo a la izquierda para ajustar la alineación de las imágenes */
+}
+
+.palabra {
+    position: absolute;
+    /* Permite que el texto se posicione en relación al contenedor de la imagen */
+    bottom: 0.75rem;
+    /* Coloca el texto cerca del borde inferior de la imagen */
+    left: 2rem;
+    /* Establece que el texto se ubique un poco alejado del borde izquierdo */
+    color: white;
+    /* El color del texto */
+    background-color: rgba(0, 0, 0, 0.5); 
+    /* Fondo semi-transparente negro*/
+    padding: 5px;
+    /* Espaciado interno alrededor del texto para hacerlo más legible */
+    border-radius: 5px;
+    /* Borde redondeado*/
+}
+
+/*--------------------------------- Media Queries para hacer la pagina responsive--------------------------------------*/
+
+
+/* Para pantallas con ancho máximo de 1200px */
+@media (max-width: 1200px) {
+    .imagen-container {
+      /* Define el ancho del contenedor al 50% del elemento menos 1rem */
+      width: calc(50% - 1rem);
+    }
+  
+    .imagen-container img {
+      /* La imagen ocupará el 100% del ancho del contenedor */
+      width: 100%;
+      /* La altura se ajusta automáticamente para mantener la proporción original */
+      height: auto;
+      /* Elimina cualquier margen a la izquierda */
+      margin-left: 0;
+    }
+}
+  
+/* Para pantallas con ancho máximo de 768px */
+@media (max-width: 768px) {
+    .imagen-container {
+      /* Asigna el ancho completo (100%) del contenedor */
+      width: 100%;
+      /* Añade un margen inferior de 1rem para separar los elementos */
+      margin-bottom: 1rem;
+    }
+  
+    .imagen-container img {
+      /* La imagen ocupará el 100% del ancho del contenedor */
+      width: 100%;
+      /* La altura se ajusta automáticamente manteniendo la proporción */
+      height: auto;
+    }
+  
+    .palabra {
+      /* Define el tamaño de la fuente en 14px */
+      font-size: 14px;
+      /* Posiciona el elemento a 1rem desde la izquierda */
+      left: 1rem;
+      /* Posiciona el elemento a 0.5rem desde la parte inferior */
+      bottom: 0.5rem;
+    }
+}
+  
+/* Para pantallas con ancho máximo de 480px */
+@media (max-width: 480px) {
+    .galeria {
+      /* Cambia la dirección de los elementos flex a columna, apilándolos verticalmente */
+      flex-direction: column;
+    }
+  
+    .imagen-container {
+      /* Asigna el ancho completo (100%) del contenedor */
+      width: 100%;
+    }
+  
+    .palabra {
+      /* Reduce el tamaño de la fuente a 12px para dispositivos con pantallas pequeñas */
+      font-size: 12px;
+    }
+}

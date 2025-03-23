@@ -1,0 +1,412 @@
+/*Parte Framework de la linea 9-26 son los botones del carrusel (es del bootstrap por eso no hay css solo lo que he añadido yo) (https://getbootstrap.com/docs/5.3/components/carousel/#crossfade*/
+
+/*De la linea 31-39 he cogido 2 lineas (32 y 38) de este boton de uiverse.io (https://uiverse.io/barisdogansutcu/fuzzy-bullfrog-72) */
+
+/*Parte Framework de la linea 87-210 son los iconos hechos con framework de uiverse.io (https://uiverse.io/wilsondesouza/ancient-yak-5)*/
+
+/*-----------------------------------------------------------Carrusel--------------------------------------------------------*/
+
+/* Estilo para los iconos de los controles del carrusel (previo y siguiente) */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color:  #00000073; /* Establece un fondo semi-transparente oscuro */
+}
+
+/* Estilo para los botones de control del carrusel */
+.carousel-control-next, .carousel-control-prev {
+  height: 5rem; /* Define la altura del botón */
+  width: 2rem; /* Define el ancho del botón */
+  margin-top: 25rem; /* Define un margen superior */
+}
+
+/* Estilos para el carrusel */
+.carousel-inner {
+  margin-top: -1em; /* Añade un margen superior */
+  height: 50rem; /* Define la altura del carrusel */
+  margin-bottom: -1rem; /* Añade un margen inferior */
+}
+
+
+/*--------------------------------------------------------------header------------------------------------------------------*/
+
+.nombres-header {
+  transition: 0.75s; /* Aplica una transición de 0.75 segundos */
+  font-family: serif; /* Establece la fuente como serif */
+}
+
+/* Estilo cuando el ratón pasa sobre el nombre */
+.nombres-header:hover {
+  letter-spacing: 6px; /* Aumenta el espacio entre las letras */
+}
+
+/* Estilo del header */
+header {
+  background-color: #ffffff; /* Fondo blanco */
+  color: black; /* Texto negro */
+}
+
+/* Estilo para la lista de navegación */
+nav ul {
+  display: flex; /* Sirve para organizar los elementos */
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0; /* Elimina el margen por defecto */
+  padding: 0; /* Elimina el padding por defecto */
+  margin-top: 2rem; /* Añade un margen superior */
+}
+
+nav ul li {
+  margin-right: 1.75rem; /* Añade un margen derecho */
+  align-content: center; /* Centra el contenido dentro del li */
+  font-size: 1.15rem; /* Establece el tamaño de la fuente */
+}
+
+/* Estilo de los enlaces dentro de la lista */
+nav ul li a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: black; /* Establece el color del texto como negro */
+}
+
+.logo {
+  width: 3rem; /* Define el ancho del logo */
+  height: 3rem; /* Define la altura del logo */
+  margin-left: 2rem; /* Añade un margen izquierdo */
+}
+
+.logoletra {
+  height: 7rem; /* Define la altura del logo */
+  width: 8rem; /* Define el ancho del logo */
+  margin-top: -75px; /* Mueve el logo hacia arriba */
+  margin-left: 70rem; /* Mueve el logo hacia la derecha */
+}
+
+/* Estilo de la línea horizontal en el encabezado */
+#linea {
+  margin-top: -20px; /* Mueve la línea hacia arriba*/
+  width: 100%; /* La línea ocupa todo el ancho */
+}
+
+/*-------------------------------------- Footer ---------------------------------------------*/
+
+/* Estilo para los iconos */
+ul {
+  list-style: none; /* Elimina los puntos de la lista */
+}
+
+/* Estilo para el contenedor de los iconos*/
+.example-2 {
+  display: flex; /* Sirve para organizar los iconos */
+  justify-content: center; /* Centra los iconos horizontalmente */
+  align-items: center; /* Centra los iconos verticalmente */
+  margin-left: 42rem; /* Añade un margen izquierdo */
+}
+
+/* Estilo para cada icono dentro del contenedor */
+.example-2 .icon-content {
+  margin: 0 5px; /* Añade un margen de 5px a la izquierda y derecha */
+  position: relative; /* Posiciona los iconos de manera relativa que es que se ponga por delante*/
+}
+
+/* Estilo para el texto (tooltip) que aparece al pasar el ratón sobre el icono */
+.example-2 .icon-content .tooltip {
+  position: absolute; /* Posiciona el texto de manera absoluta que es que salga para arriba */
+  top: -30px; /* Coloca el texto 30px por encima del icono */
+  left: 50%; /* Centra el texto horizontalmente */
+  transform: translateX(-50%); /* Ajusta la posición para centrarla */
+  color: #fff; /* Color de texto blanco */
+  padding: 6px 10px; /* Añade un padding alrededor del texto */
+  border-radius: 5px; /* Redondea los bordes del texto */
+  opacity: 0; /* El texto es invisible */
+  visibility: hidden; 
+  font-size: 14px; /* Tamaño de fuente del texto */
+  transition: all 0.3s ease; /* Aplica una transición suave para la visibilidad */
+}
+
+/* Estilo cuando el ratón pasa sobre el icono (muestra el texto) */
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1; /* Hace visible el texto */
+  visibility: visible; /* Muestra el texto */
+  top: -50px; /* Mueve el texto más arriba */
+}
+
+/* Estilo para el enlace de cada icono */
+.example-2 .icon-content a {
+  position: relative; /* Posiciona el enlace de manera relativa que es que se ponga por delante*/
+  overflow: hidden; /* Oculta el contenido que sobresale del borde */
+  display: flex; /* Sirve para centrar el icono */
+  justify-content: center; /* Centra el icono horizontalmente */
+  align-items: center; /* Centra el icono verticalmente */
+  width: 50px; /* Define el ancho */
+  height: 50px; /* Define la altura */
+  border-radius: 50%; /* Hace el enlace circular */
+  color: #000000; /* Color del texto negro */
+  background-color: #fff; /* Fondo blanco para el enlace */
+  transition: all 0.3s ease-in-out; /* Aplica una transición suave */
+}
+
+/* Estilo cuando el ratón pasa sobre el enlace */
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%); /* Añade una sombra al pasar el ratón */
+}
+
+/* Estilo para el icono dentro del enlace */
+.example-2 .icon-content a svg {
+  position: relative; /* Posiciona el icono de manera relativa */
+  z-index: 1; /* Coloca el icono por encima de otros elementos */
+  width: 30px; /* Define el ancho */
+  height: 30px; /* Define la altura */
+}
+
+/* Estilo para el cambio de color del icono al pasar el ratón */
+.example-2 .icon-content a:hover {
+  color: white; /* Cambia el color del icono a blanco */
+}
+
+/* Estilo para la animación de los iconos */
+.example-2 .icon-content a .filled {
+  position: absolute; /* Posiciona la animación de manera absoluta */
+  top: auto; /* No mueve el icono */
+  bottom: 0; /* Coloca la animación en la parte inferior */
+  left: 0; /* Alinea la animación a la izquierda */
+  width: 100%; /* La animación ocupa todo el ancho del enlace */
+  height: 0; /* La animación empieza con altura 0 */
+  transition: all 0.3s ease-in-out; /* Aplica una transición suave */
+}
+
+/* Estilo cuando el ratón pasa sobre el enlace */
+.example-2 .icon-content a:hover .filled {
+  height: 100%; /* Hace que la animación ocupe toda la altura del enlace */
+}
+
+.example-2 .icon-content a[data-social="facebook"] .filled,
+.example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+  background-color: #3b5998; /* Establece el color de fondo para Facebook */
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f); /* Establece un difuminado para Instagram */
+}
+
+/* Estilos para el pie de página */
+footer {
+  padding: 20px; /* Añade 20px de padding alrededor del pie de página */
+  background-color: rgb(255, 255, 255); /* Fondo blanco */
+  color: #000000; /* Texto negro */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center;  /* Sirve para que los elementos se pongan en la misma linea*/
+  padding: 10px 0; /* Añade un padding de 10px arriba y abajo */
+}
+
+/* Estilos para los elementos dentro del pie de página */
+footer div {
+  display: flex;  /* Sirve para que los elementos se pongan en la misma linea*/
+  align-items: center;  /* Sirve para que los elementos se pongan en la misma linea*/
+}
+
+/* Estilo para el texto dentro del pie de página */
+span {
+  margin-left: 4rem; /* Añade un margen izquierdo */
+  width: 20rem; /* Establece el ancho del texto del footer */
+  font-family: serif; /* Establece la fuente como serif */
+}
+
+/*------------------------------------- Estilos generales -----------------------------------*/
+
+/* Estilo general para los títulos */
+.titulos {
+  width: 53%; /* Establece el ancho de los títulos */
+  font-size: 3rem; /* Establece el tamaño de la letra */
+  margin-left: 15%; /* Añade un margen izquierdo*/
+  font-weight: normal; /* Hace que no se ponga la letra en negrita */
+  font-family: serif; /* Establece la fuente como serif */
+}
+
+/* Estilos para los enlaces */
+.link-al-apartado {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/* Efecto al pasar el ratón por encima de los enlaces */
+.link-al-apartado:hover {
+  opacity: 0.7; /* Hace que el enlace sea ligeramente transparente */
+}
+
+/*--------------------------------- Media Queries para hacer la pagina responsive--------------------------------------*/
+
+/* Para pantallas medianas (tablets) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .carousel-inner {
+    height: 40rem; 
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    margin-top: 20rem;  
+  }
+
+  /* Ajustes para el header */
+  nav ul li {
+    font-size: 1rem;  
+    margin-right: 1rem;  
+  }
+
+  .logoletra {
+    height: 6rem;  
+    width: 7rem;  
+    margin-left: 40rem;  
+  }
+
+  /* Ajustes para el footer */
+  .example-2 {
+    margin-left: 25rem;  
+  }
+
+  span {
+    margin-left: 2rem;  
+    width: 15rem;  
+  }
+
+  /* Ajustes generales */
+  .titulos {
+    width: 70%;  
+    font-size: 2.5rem;  
+    margin-left: 8%;  
+}
+}
+/* Para pantallas pequeñas (móviles grandes y tablets pequeñas) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .carousel-inner {
+    height: 30rem; 
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    margin-top: 15rem;  
+    height: 3rem;  
+  }
+
+  /* Ajustes para el header */
+  nav ul {
+    flex-wrap: wrap;  
+    justify-content: center; 
+  }
+
+  nav ul li {
+    font-size: 0.9rem;  
+    margin-right: 0.8rem;  
+    margin-bottom: 0.5rem;  
+  }
+
+  .logo {
+    width: 2.5rem; 
+    height: 2.5rem;  
+    margin-left: 1rem; 
+  }
+
+  .logoletra {
+    display: none;
+
+  }
+
+  /* Ajustes para el footer */
+  .example-2 {
+    margin-left: 10rem; 
+  }
+
+  span {
+    margin-left: 1rem;  
+    width: 12rem;  
+    font-size: 0.9rem; 
+  }
+
+  /* Ajustes generales */
+  .titulos {
+    width: 80%;  
+    font-size: 2rem;  
+    margin-left: 5%; 
+  }
+}
+
+/* Para pantallas muy pequeñas (móviles) */
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .carousel-inner {
+    height: 20rem; 
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    margin-top: 10rem; 
+    height: 2rem; 
+    width: 1.5rem;
+  }
+
+  /* Ajustes para el header */
+  nav ul {
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 1rem; 
+  }
+
+  nav ul li {
+    font-size: 0.8rem; 
+    margin-right: 0; 
+    margin-bottom: 0.5rem;
+  }
+
+  .logo {
+    width: 2rem;
+    height: 2rem; 
+    margin-left: 0.5rem; 
+  }
+
+  .logoletra {
+   display: none;
+  }
+
+  #linea {
+    margin-top: -10px;
+  }
+
+  .example-2 {
+    margin-left: 0; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+  }
+
+  .example-2 .icon-content {
+    margin: 0 3px; 
+    margin-bottom: 5px; 
+  }
+
+  .example-2 .icon-content a {
+    width: 40px; 
+    height: 40px; 
+  }
+
+  .example-2 .icon-content a svg {
+    width: 20px;
+    height: 20px; 
+  }
+
+  span {
+    margin-left: 0.5rem; 
+    width: 90%; 
+    font-size: 0.8rem; 
+    text-align: center;
+  }
+
+  footer div {
+    flex-direction: column; 
+  }
+
+  .titulos {
+    width: 90%; 
+    font-size: 1.5rem;
+    margin-left: 5%; 
+    text-align: center; 
+  }
+
+  .nombres-header:hover {
+    letter-spacing: 3px; 
+  }
+}
+

@@ -1,0 +1,98 @@
+.equipo {
+    display: flex;                
+    /* Hace que los elementos de equipo se dispongan en una fila flexible */
+    justify-content: center;      
+    /* Centra los elementos horizontalmente dentro del contenedor equipo */
+    gap: 2rem;                    
+    /* Añade un espacio de 2rem entre los elementos de equipo */
+    margin-top: 2rem;             
+    /* Añade un margen superior de 2rem al contenedor .equipo para separarlo del contenido anterior */
+}
+
+.miembro {
+    text-align: center;           
+    /* Centra el texto dentro de cada elemento con la clase .miembro */
+}
+
+.foto {
+    border: solid 2px;            
+    /* Añade un borde sólido de 2px alrededor del elemento con la clase .foto */
+    width: 18rem;                 
+    /* Establece el ancho del elemento con la clase foto a 18rem */
+    height: 18rem;                
+    /* Establece la altura del elemento con la clase foto a 18rem */
+    margin-bottom: 1rem;          
+    /* Añade un margen inferior de 1rem a la imagen dentro de foto */
+
+    background-image: url('../imagenes/FOTO\ \(1\).jpeg ');  
+    /* Establece una imagen de fondo para el contenedor foto */
+    background-size: cover;                                 
+    /* Hace que la imagen de fondo cubra todo el área del contenedor sin distorsionarse */
+    background-position: center;                            
+    /* Centra la imagen de fondo dentro del contenedor */
+    background-repeat: no-repeat;                           
+    /* Evita que la imagen de fondo se repita si el contenedor es más grande que la imagen */
+}
+
+.foto1 {
+    border: solid 2px;            
+    /* Añade un borde sólido de 2px alrededor del elemento con la clase foto1 */
+    width: 18rem;                 
+    /* Establece el ancho del elemento con la clase foto1 a 18rem */
+    height: 18rem;                
+    /* Establece la altura del elemento con la clase foto1 a 18rem */
+    margin-bottom: 1rem;          
+    /* Añade un margen inferior de 1rem a la imagen dentro de .foto1 */
+
+    background-image: url('../imagenes/edu.png');  
+    /* Establece una imagen de fondo específica para foto1 */
+    background-size: cover;                 
+    /* Hace que la imagen de fondo cubra todo el contenedor sin distorsionarse */
+    background-position: center;            
+    /* Centra la imagen de fondo dentro del contenedor foto1 */
+}
+
+h3 {
+    margin-top: 0.5rem;           
+    /* Añade un margen superior de 0.5rem a todos los elementos h3 para separarlos de los elementos anteriores */
+}
+
+/*--------------------------------- Media Queries para hacer la pagina responsive--------------------------------------*/
+
+
+@media (max-width: 1200px) {
+    .equipo {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .miembro {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .equipo {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .foto,
+    .foto1 {
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .foto,
+    .foto1 {
+      width: 12rem;
+      height: 12rem;
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+  

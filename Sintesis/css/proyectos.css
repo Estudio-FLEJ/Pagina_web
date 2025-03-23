@@ -1,0 +1,99 @@
+/* Parte que tiene FRAMEWORK de la linea 46-62 lo he cogido de uiverse.io (https://uiverse.io/biswacpcode/curvy-crab-71)*/
+
+#menu {
+    width: 50%;
+    /*Sirve para establecer el ancho del contenedor */
+    margin-left: 20rem;
+    /*Sirve para poner margen de la izquierda*/
+    margin-top: -2rem;
+    /*Sirve para poner margen superior*/
+}
+
+#palabraexteriores,
+#palabraarquitectura,
+#palabrainteriores {
+    display: flex;
+    /*En este caso sirve para que los nombres se pongan en la misma linea que la flecha*/
+    align-items: center;
+    /* Centra los elementos verticalmente dentro del contenedor */
+    font-size: 1.25em;
+    /*Sirve para ponerle tamaño al texto*/
+    color: black;
+    /* Sirve para ponerle el color del texto a negro */
+}
+
+.flecha {
+    filter: grayscale(100%);
+    /* Aplica un filtro de escala de grises al 100% a la imagen de la flecha, convirtiéndola en blanco y negro */
+    width: 2.5rem; 
+    /*Sirve para establecer el ancho de la flecha */
+    height: 2.5rem; 
+    /*Sirve para establecer la altura de la flecha */
+}
+
+
+.titulos1 { 
+    color: rgb(0, 0, 0); /* Establece el color del texto a negro */
+    font-weight: normal; /* Sirve para que el texto no se ponga en negrita*/
+    font-family: serif; /* Define la familia de la fuente como 'serif'*/
+}
+
+.titulos1::after, .titulos1::before {
+    content: ''; /**/
+    width: 0%; /* Sirve para que la linea no aparezca hasta que no pases por encima*/
+    height: 2px; /* Sirve para hacer que sea mas o menos gorda la linea */
+    background: #000000; /*Sirve para darle color negro a la linea*/
+    display: block; /*Hace que la linea salga en horizontal*/
+    transition: 1.5s; /*Para definir lo qye va a tardar en aparecer y en desaparecer*/
+}
+
+.titulos1::before {
+    margin-left: auto; /*Sirve para que la linea vaya hacia la derecha*/
+}
+  
+
+.titulos1:hover::after, .titulos1:hover::before {
+    width: 100%; /*Sirve para que cuando pases por encima la linea se expanda al maximo*/
+}
+
+
+
+
+/*----------------------------------------- Media Queries para hacer la pagina responsive--------------------------------------*/
+
+
+  /* Para pantallas pequeñas (móviles grandes y tablets pequeñas) */
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    #menu {
+      width: 80%;  
+      margin-left: 5rem;  
+      margin-top: -1rem;  
+    }
+  
+    .flecha {
+      width: 2rem;  
+      height: 2rem;
+    }
+  }
+  
+  /* Para pantallas muy pequeñas (móviles) */
+  @media screen and (min-width: 100px) and (max-width: 480px) {
+    #menu {
+      width: 90%;  
+      margin-left: 1rem;  
+      margin-top: 0;  
+    }
+  
+    #palabraexteriores,
+    #palabraarquitectura,
+    #palabrainteriores {
+      font-size: 1em;  
+    }
+  
+    .flecha {
+      width: 1.5rem;  
+      height: 1.5rem;
+    }
+  }
+  
+  

@@ -1,0 +1,102 @@
+/*Parte Framework de la linea 4-44 es el boton que lo he cogido del uiverse.io y este es el link (https://uiverse.io/alexroumi/shy-sloth-91)*/
+
+/* Estilos para el botón */
+.boton {
+    padding: 15px 25px; /* Aplica un relleno de 15px arriba y abajo, y 25px a la izquierda y derecha dentro del botón */
+    border: none; /* Elimina el borde*/
+    border-radius: 7px; /* Redondea los bordes del botón */
+    color: #000000; /* Establece el color del texto del botón como negro */
+    z-index: 1; /* Establece la prioridad en el apilamiento de elementos (elemento encima de otros) */
+    background: #2b0000; /* Establece el color de fondo del botón en un tono oscuro de rojo */
+    position: relative; /* Establece la posición relativa del botón*/
+    font-weight: 400; /* Establece el grosor de la fuente */
+    font-size: 1.45rem; /* Establece el tamaño de la letra*/
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga de los bordes del botón */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando el usuario pasa sobre el botón */
+    margin-left: 13rem; /* Establece un margen a la izquierda */
+    margin-top: 1rem; /* Establece un margen superior */
+}
+
+/* Estilos para el contenido dentro del botón */
+.boton-span {
+    margin-left: -4rem; /* Aplica un margen negativo a la izquierda */
+    text-decoration: none; /* Elimina el subrayado*/
+    color: #ffffff; /* Establece el color del texto como blanco */
+}
+
+.boton::before {
+    content: ""; 
+    position: absolute; /* Posiciona el boton de manera absoluta respecto al contenedor */
+    top: 0; /* Lo coloca en la parte superior del contenedor */
+    left: 0; /* Lo coloca en la parte izquierda del contenedor */
+    height: 100%; /* Establece la altura del boton a la altura del contenedor del botón */
+    width: 0; /* Comienza con un ancho de 0 (invisible al inicio) */
+    border-radius: 7px; /* Redondea los bordes del boton con el mismo radio de 7px que el botón */
+    background-color: #000000; /* Establece el color de fondo del boton a negro */
+    z-index: -1; /* Coloca el boton detrás del contenido del botón */
+    transition: all 250ms; /* Aplica una transición  */
+}
+
+
+.boton:hover::before {
+    width: 100%; /* Cuando pasas por encima se expande lo negro por encima */
+       
+}
+
+
+#contactos {
+    margin-left: 13rem;
+    /* Aplica un margen a la izquierda*/
+    font-size: 1.45rem;
+    /* Define el tamaño de letra*/
+    width: 36rem;
+    /* Establece el ancho */
+    font-family: serif;
+    /* Define el tipo de fuente como serif */
+}
+
+/*--------------------------------- Media Queries para hacer la pagina responsive--------------------------------------*/
+
+
+
+  /* Para pantallas pequeñas (móviles grandes y tablets pequeñas) */
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    .boton {
+      margin-left: 5rem; 
+      font-size: 1.2rem;
+      padding: 10px 18px; 
+    }
+  
+    .boton-span {
+      margin-left: -2rem; 
+    }
+  
+    #contactos {
+      margin-left: 5rem; 
+      font-size: 1.2rem; 
+      width: 25rem;
+    }
+  }
+  
+  /* Para pantallas muy pequeñas (móviles) */
+  @media screen and (min-width: 100px) and (max-width: 480px) {
+    .boton {
+      margin-left: 1rem;
+      font-size: 1rem;
+      padding: 8px 15px;
+      width: 80%;
+      max-width: 250px; 
+      text-align: center; 
+    }
+  
+    .boton-span {
+      margin-left: 0; 
+    }
+  
+    #contactos {
+      margin-left: 1rem; 
+      font-size: 1rem; 
+      width: 90%;
+      max-width: 300px; 
+    }
+  }
